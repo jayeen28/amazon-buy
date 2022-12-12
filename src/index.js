@@ -15,7 +15,7 @@ const main = async () => {
             await entities[step](page);
         };
         console.log('done')
-        return browser.close();
+        // return browser.close();
     }
     catch (e) {
         console.log(e);

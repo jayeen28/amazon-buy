@@ -13,6 +13,7 @@ module.exports = async function (page) {
         await frame.waitForSelector(v);
     }
     for (let k in paymentSelectors) {
+        console.log(k)
         if (k.startsWith('add')) {
             return await frame.click(paymentSelectors[k]);
         } else await frame[k.startsWith('select') ? 'select' : 'type'](paymentSelectors[k], paymentValues[k]);

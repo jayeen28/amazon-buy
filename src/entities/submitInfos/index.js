@@ -14,6 +14,7 @@ module.exports = async page => {
         return await actions[formType?.trim()](page, shippingSubmits['2']);
     }
     catch (e) {
+        console.log(e)
         throw new Error(e);
     }
 }

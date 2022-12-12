@@ -11,8 +11,8 @@ module.exports = async function (page) {
     await page.keyboard.press('Backspace');
     await page.type(shippingSelectors.fullName, data.fullName, { delay: 80 });
     await page.type(shippingSelectors.phone, data.phone, { delay: 80 });
-    await page.type(shippingSelectors.addr1, data.address1, { delay: 80 });
-    await page.type(shippingSelectors.address2, data.address2, { delay: 80 });
+    await page.type(shippingSelectors.addr1, data.addr1, { delay: 80 });
+    await page.type(shippingSelectors.addr2, data.addr2, { delay: 80 });
     await page.type(shippingSelectors.city, data.city, { delay: 80 });
     if (await page.$(shippingSelectors.regDrop)) {
         await page.select(shippingSelectors.regDrop, data.state.short);
