@@ -1,15 +1,16 @@
 module.exports = {
     buySelector: '#buy-now-button',
-    addrSelectors: [
-        '#address-ui-widgets-enterAddressFullName',
-        '#address-ui-widgets-enterAddressPhoneNumber',
-        '#address-ui-widgets-enterAddressLine1',
-        '#address-ui-widgets-enterAddressLine2',
-        '#address-ui-widgets-enterAddressCity',
-        '#address-ui-widgets-enterAddressPostalCode',
-        '#address-ui-widgets-enterAddressStateOrRegion-dropdown-nativeId',
-        '#address-ui-widgets-countryCode-dropdown-nativeId'
-    ],
+    shippingSelectors: {
+        fullName: '#address-ui-widgets-enterAddressFullName',
+        phone: '#address-ui-widgets-enterAddressPhoneNumber',
+        addr1: '#address-ui-widgets-enterAddressLine1',
+        addr2: '#address-ui-widgets-enterAddressLine2',
+        city: '#address-ui-widgets-enterAddressCity',
+        postalCode: '#address-ui-widgets-enterAddressPostalCode',
+        regDrop: '#address-ui-widgets-enterAddressStateOrRegion-dropdown-nativeId',
+        regInput: '#address-ui-widgets-enterAddressStateOrRegion',
+        countryDrop: '#address-ui-widgets-countryCode-dropdown-nativeId'
+    },
     paymentSelectors: {
         cardNumber: '[name="addCreditCardNumber"]',
         nameOnCard: '[name="ppw-accountHolderName"]',
