@@ -1,7 +1,7 @@
 const { selectors: { shippingSelectors, shippingSubmits }, secrets: { buyerInfo: data } } = require('../../data');
 
 module.exports = async function (page) {
-    await Promise.all(shippingSelectors.map((s) => page.waitForSelector(s)));
+    await Promise.all(Object.values(shippingSelectors).map((s) => page.waitForSelector(s)));
     // country select
     await page.click(shippingSelectors.countryDrop);
     await page.type(shippingSelectors.countryDrop, data.country, { delay: 90 });
