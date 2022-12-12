@@ -11,6 +11,10 @@ module.exports = {
         regInput: '#address-ui-widgets-enterAddressStateOrRegion',
         countryDrop: '#address-ui-widgets-countryCode-dropdown-nativeId'
     },
+    shippingSubmits: {
+        '1': '#address-ui-widgets-form-submit-button-announce',
+        '2': '[aria-labelledby="shipToThisAddressButton-announce"]'
+    },
     paymentSelectors: {
         cardNumber: '[name="addCreditCardNumber"]',
         nameOnCard: '[name="ppw-accountHolderName"]',

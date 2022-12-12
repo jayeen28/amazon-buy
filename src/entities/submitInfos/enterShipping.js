@@ -1,4 +1,4 @@
-const { selectors: { shippingSelectors }, secrets: { buyerInfo: data } } = require('../../data');
+const { selectors: { shippingSelectors, shippingSubmits }, secrets: { buyerInfo: data } } = require('../../data');
 
 module.exports = async function (page) {
     await Promise.all(shippingSelectors.map((s) => page.waitForSelector(s)));
@@ -19,5 +19,5 @@ module.exports = async function (page) {
     }
     else await page.type(shippingSelectors.regInput, data.state.full, { delay: 80 });
     await page.type(shippingSelectors.postalCode, data.zipCode, { delay: 80 });
-    return this['Choose a shipping address'](page, '#address-ui-widgets-form-submit-button-announce');
+    return this['Choose a shipping address'](page, shippingSubmits['1']);
 };
