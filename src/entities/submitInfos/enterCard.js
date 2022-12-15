@@ -1,7 +1,9 @@
 const { selectors: { paymentSelectors }, secrets: { paymentValues } } = require('../../data');
+const sleep = require('../../utils/sleep');
 
 module.exports = async function (page) {
     await page.waitForNavigation({ waitUntil: 'networkidle0' });
+    await sleep(2000);
     await page.waitForSelector('#apx-add-credit-card-action-test-id');
     await page.click('#apx-add-credit-card-action-test-id');
     await page.waitForSelector('iframe');

@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 const entities = require('./entities');
 const sleep = require('./utils/sleep');
 
-const targets = ['https://www.amazon.com/dp/B09SVQY3PF'];
+const targets = ['https://www.amazon.com/dp/B09BDGD2TZ'];
 const steps = ['clickBuy', 'login', 'submitInfos'];
 
 const main = async () => {
